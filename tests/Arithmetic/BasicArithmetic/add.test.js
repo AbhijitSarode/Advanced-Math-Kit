@@ -52,7 +52,7 @@ describe('add function', () => {
         console.warn = originalConsoleWarn;
 
         expect(consoleOutput.length).toBe(1);
-        expect(consoleOutput[0]).toContain('Answer is Infinity');
+        expect(consoleOutput[0]).toContain('Warning: add() answer is Infinity');
     });
 })
 

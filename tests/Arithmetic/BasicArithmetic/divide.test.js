@@ -55,6 +55,6 @@ describe('divide function', () => {
         console.warn = originalConsoleWarn;
 
         expect(consoleOutput.length).toBe(1);
-        expect(consoleOutput[0]).toContain('Answer is Infinity');
+        expect(consoleOutput[0]).toContain('Warning: divide() answer is Infinity');
     });
 });
