@@ -1,23 +1,24 @@
 const wrapWithResources = require('../utils/resourceWrapper')
+const warn = require('../utils/error')
 
 const add = wrapWithResources((...numbers) => {
     // Throw error if arguments are less than 2
     if (numbers.length < 2) {
-        throw new Error('At least two arguments must be provided')
+        throw new Error('At least two arguments must be provided for addition')
     }
-
+    
     const result = numbers.reduce((acc, curr) => {
         // Throw error if arguments type is not valid Number 
         if (isNaN(curr) || !isFinite(curr)) {
-            throw new Error('Invalid input. Please provide a valid number')
+            throw new Error('Invalid input. Please provide a valid number for addition')
         }
-
+        
         return acc + curr
     },0)
-
+    
     // Warn user if result is Infinity
     if (!isFinite(result)) {
-        console.warn('Answer is Infinity')
+        warn('add() answer is Infinity')
     }
 
     return result
@@ -25,15 +26,15 @@ const add = wrapWithResources((...numbers) => {
 
 
 const subtract = wrapWithResources((...numbers) => {
-    // Throw error if arguments are less than 2
+        // Throw error if arguments are less than 2
         if (numbers.length < 2) {
-        throw new Error('At least two arguments must be provided')
+        throw new Error('At least two arguments must be provided for subtraction')
     }
 
     const result = numbers.reduce((acc, curr) => {
         // Throw error if arguments type is not valid Number 
         if (isNaN(curr) || !isFinite(curr)) {
-            throw new Error('Invalid input. Please provide a valid number')
+            throw new Error('Invalid input. Please provide a valid number for subtraction')
         }
 
         return acc - curr
@@ -44,9 +45,9 @@ const subtract = wrapWithResources((...numbers) => {
 
 
 const divide = wrapWithResources((...numbers) => {
-    // Throw error if arguments are less than 2
+        // Throw error if arguments are less than 2
         if (numbers.length < 2) {
-        throw new Error('At least two arguments must be provided')
+        throw new Error('At least two arguments must be provided for division')
     }
 
     const result = numbers.reduce((acc, curr) => {
@@ -57,15 +58,15 @@ const divide = wrapWithResources((...numbers) => {
         
         // Throw error if arguments type is not valid Number 
         if (isNaN(curr) || !isFinite(curr)) {
-            throw new Error('Invalid input. Please provide a valid number')
+            throw new Error('Invalid input. Please provide a valid number for division')
         }
 
         return acc / curr
     })
 
-        // Warn user if result is Infinity
+    // Warn user if result is Infinity
     if (!isFinite(result)) {
-        console.warn('Answer is Infinity')
+        warn('divide() answer is Infinity')
     }
 
     return result
