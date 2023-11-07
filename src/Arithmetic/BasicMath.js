@@ -9,7 +9,7 @@ const add = wrapWithResources((...numbers) => {
     
     const result = numbers.reduce((acc, curr) => {
         // Throw error if arguments type is not valid Number 
-        if (isNaN(curr) || !isFinite(curr)) {
+        if (isNaN(curr) || !isFinite(curr) || curr === undefined) {
             throw new Error('Invalid input. Please provide a valid number for addition')
         }
         
@@ -33,7 +33,7 @@ const subtract = wrapWithResources((...numbers) => {
 
     const result = numbers.reduce((acc, curr) => {
         // Throw error if arguments type is not valid Number 
-        if (isNaN(curr) || !isFinite(curr)) {
+        if (isNaN(curr) || !isFinite(curr) || curr === undefined) {
             throw new Error('Invalid input. Please provide a valid number for subtraction')
         }
 
@@ -57,8 +57,12 @@ const divide = wrapWithResources((...numbers) => {
         }
         
         // Throw error if arguments type is not valid Number 
-        if (isNaN(curr) || !isFinite(curr)) {
+        if (isNaN(curr) || !isFinite(curr) || curr === undefined) {
             throw new Error('Invalid input. Please provide a valid number for division')
+        }
+        // Warn if one of the arguments is null
+        if (curr === null) {
+            warn('One of the values is null')
         }
 
         return acc / curr
@@ -76,13 +80,17 @@ const divide = wrapWithResources((...numbers) => {
 const multiply = wrapWithResources((...numbers) => {
         // Throw error if arguments are less than 2
         if (numbers.length < 2) {
-        throw new Error('At least two arguments must be provided for division')
+        throw new Error('At least two arguments must be provided for multiplication')
     }
 
     const result = numbers.reduce((acc, curr) => {
         // Throw error if arguments type is not valid Number 
-        if (isNaN(curr) || !isFinite(curr) || curr === null) {
-            throw new Error('Invalid input. Please provide a valid number for division')
+        if (isNaN(curr) || !isFinite(curr) || curr === undefined) {
+            throw new Error('Invalid input. Please provide a valid number for multiplication')
+        }
+        // Warn if one of the arguments is null
+        if (curr === null) {
+            warn(`One of the values is null`)
         }
 
         return acc * curr

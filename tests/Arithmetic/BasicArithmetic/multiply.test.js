@@ -21,20 +21,30 @@ describe('multiply function', () => {
         expect(BasicMath.multiply(5.5, 2.5)).toHaveProperty('result', 13.75)
     })
 
-    test('should throw an error if less than 2 arguments are provided', () => {
-        expect(() => BasicMath.multiply(5)).toThrow('At least two arguments must be provided for division')
+    test('should throw an error if no arguments are provided', () => {
+        expect(() => BasicMath.multiply()).toThrow('At least two arguments must be provided for multiplication')
     })
 
     test('should throw an error if any one argument is not a valid Number', () => {
-        expect(() => BasicMath.multiply(1, 'foo', 5)).toThrow('Invalid input. Please provide a valid number for division')
+        expect(() => BasicMath.multiply(1, 'foo', 5)).toThrow('Invalid input. Please provide a valid number for multiplication')
     })
 
     test('should throw an error if one of the arguments is NaN', () => {
-        expect(() => BasicMath.multiply(1, NaN, 2)).toThrow('Invalid input. Please provide a valid number for division')
+        expect(() => BasicMath.multiply(1, NaN, 2)).toThrow('Invalid input. Please provide a valid number for multiplication')
     })
 
-    test('should throw an error if one of the arguments is null', () => {
-        expect(() => BasicMath.multiply(1, null, 2)).toThrow('Invalid input. Please provide a valid number for division')
+    test('should log a warning if one of the arguments is null', () => {
+        const originalConsoleWarn = console.warn
+        let consoleOutput = []
+
+        console.warn = (message) => consoleOutput.push(message)
+
+        BasicMath.multiply(Number.MAX_VALUE, null)
+
+        console.warn = originalConsoleWarn
+
+        expect(consoleOutput.length).toBe(1)
+        expect(consoleOutput[0]).toContain('Warning: One of the values is null')
     })
 
     test('should log a warning for Infinity result', () => {

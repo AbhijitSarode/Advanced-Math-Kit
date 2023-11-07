@@ -44,6 +44,20 @@ describe('divide function', () => {
         expect(() => BasicMath.divide(10, Number.POSITIVE_INFINITY, 2)).toThrow('Invalid input. Please provide a valid number');
     });
 
+    test('should log a warning if one of the arguments is null', () => { 
+        const originalConsoleWarn = console.warn;
+        let consoleOutput = [];
+
+        console.warn = (message) => consoleOutput.push(message)
+
+        BasicMath.divide(1, null);
+
+        console.warn = originalConsoleWarn;
+
+        expect(consoleOutput.length).toBe(1);
+        expect(consoleOutput[0]).toContain('Warning: One of the values is null');
+    });
+
     test('should log a warning for Infinity result when dividing by a very small number', () => { 
         const originalConsoleWarn = console.warn;
         let consoleOutput = [];
