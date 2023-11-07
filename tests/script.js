@@ -17,3 +17,7 @@ const division = BasicMath.divide(64, 4, 2)
 const divisionInfinity = BasicMath.divide(1, Number.MIN_VALUE)
 console.log(`division: Remainder is ${division} of type ${typeof division}`);
 console.log(`division: Remainder is ${divisionInfinity} of type ${typeof divisionInfinity}\n`);
+
+// Multiply
+const multiplication = BasicMath.multiply(123, 345, 312.0)
+console.log(`multiplication: Product is ${multiplication} of type ${typeof multiplication}\n`);

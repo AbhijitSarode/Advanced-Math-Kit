@@ -72,4 +72,28 @@ const divide = wrapWithResources((...numbers) => {
     return result
 })
 
-module.exports = { add, subtract, divide }
+
+const multiply = wrapWithResources((...numbers) => {
+        // Throw error if arguments are less than 2
+        if (numbers.length < 2) {
+        throw new Error('At least two arguments must be provided for division')
+    }
+
+    const result = numbers.reduce((acc, curr) => {
+        // Throw error if arguments type is not valid Number 
+        if (isNaN(curr) || !isFinite(curr) || curr === null) {
+            throw new Error('Invalid input. Please provide a valid number for division')
+        }
+
+        return acc * curr
+    })
+
+    // Warn user if result is Infinity
+    if (!isFinite(result)) {
+        warn('multiply() answer is Infinity')
+    }
+
+    return result
+})
+
+module.exports = { add, subtract, divide, multiply }
