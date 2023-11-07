@@ -1,0 +1,27 @@
+{
+  "name": "advanced-math-kit",
+  "version": "1.0.0",
+  "description": "A rich suite of basic and advanced mathematical methods",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbhijitSarode/Advanced-Math-Kit.git"
+  },
+  "keywords": [
+    "math",
+    "mathematics",
+    "tirgonometry",
+    "arithmatic",
+    "calculus",
+    "matrices"
+  ],
+  "author": "Abhijit Sarode",
+  "bugs": {
+    "url": "https://github.com/AbhijitSarode/Advanced-Math-Kit/issues"
+  },
+  "homepage": "https://github.com/AbhijitSarode/Advanced-Math-Kit#readme",
+  "license": "MIT"
+}
