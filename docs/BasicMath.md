@@ -20,6 +20,8 @@ Adds two or more numbers and returns the result.
 **Example:**
 
 ```javascript
+const { BasicMath } = require ('advanced-math-kit');
+
 const sum = BasicMath.add(2, 3, 5);
 console.log(sum); // Output: 10
 ```
@@ -34,6 +36,8 @@ Subtracts two or more numbers and returns the result.
 **Example:**
 
 ```javascript
+const { BasicMath } = require ('advanced-math-kit');
+
 const difference = BasicMath.subtract(10, 5, 3);
 console.log(difference); // Output: 2
 ```
@@ -49,6 +53,8 @@ Divides two or more numbers and returns the result.
 **Example:**
 
 ```javascript
+const { BasicMath } = require ('advanced-math-kit');
+
 const quotient = BasicMath.divide(120, 2, 5);
 console.log(quotient); // Output: 12
 ```
@@ -63,6 +69,8 @@ Multiplies two or more numbers and returns the result.
 **Example:**
 
 ```javascript
+const { BasicMath } = require ('advanced-math-kit');
+
 const product = BasicMath.multiply(2, 3, 4);
 console.log(product); // Output: 24
 ```
