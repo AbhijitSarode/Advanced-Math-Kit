@@ -14,7 +14,7 @@ npm i advanced-math-kit
 
 Here's an overview of how to use some of the key modules in Advanced Math:
 
-## Modules
+### Import Modules
 ```javascript
 const { module } = require ('advanced-math-kit');
 ```
