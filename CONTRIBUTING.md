@@ -2,13 +2,51 @@
 
 Thank you for considering contributing to Advanced Math Kit! We welcome your contributions.
 
-### Project Structure - For Beginners
+## Contents
+
+<details>
+  <summary>Introduction - For Beginners</summary>
+
+  [Project Nature ](#project-nature---for-beginners)
+
+  [Why Functional Programming?](#why-functional-programming)
+  
+  [Functional Programming Methods](#functional-programming-methods)
+  
+  1. [Map](#1-map)
+  
+  2. [Filter](#2-filter)
+  
+  3. [Reduce](#3-reduce)
+  
+  4. [Currying](#4-currying)
+</details>
+
+<details>
+  <summary>Getting Started - For Everyone</summary>
+  
+  [Making Changes](#making-changes)
+  
+  [Development Flow](#development-flow)
+  
+  [Writing Tests](#writing-tests)
+  
+  [Running Tests](#running-tests)
+  
+  [Guidelines For Testing](#guidelines-for-testing)
+  
+  [Submitting Changes](#submitting-changes)
+  
+  [Code of Conduct](#code-of-conduct)
+</details>
+
+## Project Nature - For Beginners
 
 > Note: If you are not a beginner then please skip to [getting started](#getting-started---for-everyone)
 
-Advanced Math Kit follows **functional programming** principles to enhance code readability, maintainability, and predictability. Functional programming promotes immutability, pure functions, and the avoidance of side effects, which can lead to more robust and scalable code.
+`Advanced Math Kit` follows **functional programming** principles to enhance code readability, maintainability, and predictability. Functional programming promotes immutability, pure functions, and the avoidance of side effects, which can lead to more robust and scalable code.
 
-#### Why Functional Programming?
+### Why Functional Programming?
 
 1. **Immutability:** Functions in Advanced Math Kit do not mutate data. Instead, they return new data structures, promoting immutability and reducing unintended side effects.
 
@@ -16,7 +54,7 @@ Advanced Math Kit follows **functional programming** principles to enhance code 
 
 3. **Composition:** Functions can be composed to create more complex functionality, allowing for modular and reusable code.
 
-## Functional Programming Methods
+### Functional Programming Methods
 Below JS methods & techniques adhere to functional programming paradigms which prioritize immutability and avoid side effects. Methods such as `map`, `filter`, and `reduce`, help us craft code that fosters a robust foundation for building sophisticated applications.
 
 ### 1. Map

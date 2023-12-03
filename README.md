@@ -29,6 +29,9 @@ const summation = BasicMath.add(123, 345, 567); // Output: 1035
 const product = BasicMath.add(3, 7, -12); // Output: 252
 ```
 
+## Contribution
+Contributions are welcome! If you'd like to contribute to Advanced Math Kit, please check out our [Contribution Guidelines](/CONTRIBUTING.md) for more details on how to get started.
+
 ## License
 
 This project is licensed under the  [MIT License](/LICENSE)
