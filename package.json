@@ -1,6 +1,6 @@
 {
   "name": "advanced-math-kit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A rich suite of basic and advanced mathematical methods",
   "main": "script.js",
   "scripts": {
